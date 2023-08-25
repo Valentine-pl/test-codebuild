@@ -7,8 +7,6 @@ data =  spark.read.csv(s3_path, header=True, inferSchema=True)
 # Apply the transformation
 df_transformed = transformation_func(data)
 
-df_transformed.show()
-
 # Write the transformed data to Parquet format locally (you can adjust the path as needed)
 output_path = "s3a://vp-test-coudbuilder/data/faker_database/faker_parquet/"
 df_transformed.write \

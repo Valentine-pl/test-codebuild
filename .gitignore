@@ -1,0 +1,11 @@
+.env
+bin/
+include/
+lib/
+lib64/
+share/
+derby.log
+metastore_db/
+__pycache__/
+*.pyc
+faker_data.csv   # Consider only if you don't want to version your data

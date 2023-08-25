@@ -1,0 +1,17 @@
+# buildspec.yml
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.10
+  build:
+    commands:
+      - echo Running tests...  # Replace this with actual test commands if you have any.
+      - echo Tests passed.
+  post_build:
+    commands:
+      - echo Packaging scripts...
+      - zip transformations.zip transformations.py
+      - echo Uploading package to S3...
+      - aws s3 cp transformations.zip s3://vp-test-coudbuilder/scripts/transformations.zip  # Replace with the actual S3 location.

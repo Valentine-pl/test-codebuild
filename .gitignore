@@ -8,4 +8,4 @@ derby.log
 metastore_db/
 __pycache__/
 *.pyc
-fake_data.csv   # Consider only if you don't want to version your data
+fake_data.csv
